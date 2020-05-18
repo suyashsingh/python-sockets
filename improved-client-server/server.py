@@ -11,4 +11,5 @@ while True:
     clientsocket, address = s.accept()
     print(f"Connection from {address} has been established")
     clientsocket.send(bytes("Welcome to the server!", "utf-8"))
+    # When client socket connection is closed, client recieve 0 bytes data
     clientsocket.close()
