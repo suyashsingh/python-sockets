@@ -1,8 +1,10 @@
 import socket
 HEADER_SIZE = 10 # bytes
+IP = '127.0.0.1'
+PORT = 1234
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((socket.gethostname(), 1234))
+s.connect((IP, PORT))
 
 while True:
     msg = s.recv(HEADER_SIZE)
